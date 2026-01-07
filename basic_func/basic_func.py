@@ -19,8 +19,16 @@ def power(base, pow):
 
 
 def square(base):
-    return base**(0.5)
+    return base**2
 
 
 def greet(이름="낯선자", 나이=20):
-    return print(f"안녕하신")
+    match 나이:
+        case x if 나이 > 20:
+            sentence = "안녕하십니까 "
+        case x if 나이 < 20:
+            sentence = "안녕 "
+        case x if 나이 == 20:
+            sentence = "안녕하신가 "
+
+    return f"{sentence+이름}!"
